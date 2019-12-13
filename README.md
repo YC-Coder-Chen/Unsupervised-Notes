@@ -1,6 +1,7 @@
 Unsupervised-Notes
 ============
-Unsupervised Learning study notes, contains Math behind some unsupervised machine learning models.  
+Unsupervised Learning study note, contains Math behind some unsupervised machine learning models.  
+There is also a repo available contains math behind all the mainstream [**tree-based supervised machine learning models**](https://github.com/YC-Coder-Chen/Tree-Math).
 
 Author
 ------------
