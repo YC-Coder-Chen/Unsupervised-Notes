@@ -5,7 +5,7 @@ My study notes, contains Math behind some unsupervised machine learning models.
 K-Means Clustering
 ------------
 > One Sentence Summary:   
-Partition observations into a predefined number of homogeneous subgroups by repeatedly updating the centroids of homogeneous subgroups and re-assigning subgroup labels for each data point.  
+Partition observations into a predefined number of homogeneous subgroups by repeatedly updating the centroids of the subgroups and re-assigning subgroup labels for each data point until convergence.  
 
 - **a. Some math notation**  
 Suppose we have n samples ![img](https://latex.codecogs.com/svg.latex?X%20%3D%20%5C%7Bx_1%2C%20x_2%2C%20x_3%2C%20...%2C%20x_n%5C%7D), each sample has M features ![img](https://latex.codecogs.com/svg.latex?x_i%20%3D%20%28x_%7B1i%7D%2C%20x_%7B2i%7D%2C%20x_%7B3i%7D%2C%20...%20%2C%20x_%7Bmi%7D%2C%20...%2C%20x_%7BMi%7D%29) and we want to partition them into K clusters ![img](https://latex.codecogs.com/svg.latex?C%20%3D%20%5C%7BC_1%2C%20C_2%2C%20C_3%2C%20...%2C%20C_K%5C%7D). Then all the below formulas should hold true:  
