@@ -5,7 +5,7 @@ My study notes, contains Math behind some unsupervised machine learning models.
 Principal Components Analysis
 ------------
 > One Sentence Summary:   
-Use few unrelated features to represent original features in the dataset and retain as much information (variance) as possbile.  
+Use a few unrelated features to represent original features in the dataset and retain as much information (variance) as possible.  
 
 - **a. Some math notation**  
 Suppose our dataset has m dimensions ![img](https://latex.codecogs.com/svg.latex?%5Cmathbf%7Bx%7D%20%3D%20%28x_1%2C%20x_2%2C%20...%2C%20x_m%29%5ET), and its Mean Vector is ![img](https://latex.codecogs.com/svg.latex?%5Cmathbf%7B%5Cmu%7D%20%3D%20E%28x%29%20%3D%20%28%5Cmu_1%2C%20%5Cmu_2%2C%20...%2C%20%5Cmu_m%29%5ET), its Covariance Matrix is ![img](https://latex.codecogs.com/svg.latex?%5Cmathbf%7B%5CSigma%7D%20%3D%20Cov%28x%2C%20x%29%20%3D%20E%5B%28x-%5Cmu%29%28x-%5Cmu%29%5ET%5D).  
@@ -49,7 +49,7 @@ Suppose our dataset has m dimensions ![img](https://latex.codecogs.com/svg.latex
     ![img](https://latex.codecogs.com/svg.latex?Av%3D%20%5Clambda%20v)
 
 
-    Then vector v is the Eigenvector and ![img](https://latex.codecogs.com/svg.latex?%5Clambda) is the eigenvalue.  
+    Then vector v is the Eigenvector and ![img](https://latex.codecogs.com/svg.latex?%5Clambda) is the Eigenvalue.  
 
   - The relationship between Eigenvalues, Eigenvectors & Principal Components  
 
@@ -97,7 +97,7 @@ Suppose our dataset has m dimensions ![img](https://latex.codecogs.com/svg.latex
 
     ![img](https://latex.codecogs.com/svg.latex?%5Cbegin%7Balign*%7D%20%26%5Cfrac%7B%5Cpartial%20L%28%5Calpha_2%29%7D%7B%5Cpartial%20%7B%5Calpha_2%7D%7D%20%3D%202%5CSigma%5Calpha_2%20-%202%5Clambda_2%5Calpha_2%20-%20%5Cbar%7B%5Cphi%7D%5Calpha_1%20%3D%200%20%5C%5C%20%26%5CRightarrow%202%5Calpha_1%5ET%5CSigma%5Calpha_2%20-%202%5Calpha_1%5ET%5Clambda_2%5Calpha_2%20-%20%5Cbar%7B%5Cphi%7D%5Calpha_1%5ET%5Calpha_1%20%3D%200%5C%5C%20%26%5CRightarrow%20%5Cbar%7B%5Cphi%7D%5Calpha_1%5ET%5Calpha_1%20%3D%200%5C%5C%20%26%5CRightarrow%20%5Cbar%7B%5Cphi%7D%3D%200%5C%5C%20%26%5CRightarrow%202%5CSigma%5Calpha_2%20-%202%5Clambda_2%5Calpha_2%20%3D%200%5C%5C%20%26%5CRightarrow%20%5CSigma%5Calpha_2%20-%20%5Clambda_2%5Calpha_2%20%3D%200%5C%5C%20%5Cend%7Balign*%7D)  
 
-    So based on the definition of Eigenvector and Eigenvalue, we can easily figure out that ![img](https://latex.codecogs.com/svg.latex?%5Clambda_2) is the Eigenvalue and ![img](https://latex.codecogs.com/svg.latex?%5Calpha_2) is the unit Eigenvector because ![img](https://latex.codecogs.com/svg.latex?%5Calpha_1%5ET%5Calpha_1%20%3D%201).  
+    So based on the definition of Eigenvector and Eigenvalue, we can easily figure out that ![img](https://latex.codecogs.com/svg.latex?%5Clambda_2) is the Eigenvalue and ![img](https://latex.codecogs.com/svg.latex?%5Calpha_2) is the unit Eigenvector because ![img](https://latex.codecogs.com/svg.latex?%5Calpha_2%5ET%5Calpha_2%20%3D%201).  
 
     And so ![img](https://latex.codecogs.com/svg.latex?Var%28y_2%29%20%3D%20Var%28%5Calpha_2%5ETx%29%20%3D%20%5Calpha_2%5ET%5CSigma%5Calpha_2%20%3D%20%5Calpha_2%5ET%5Clambda_2%20%5Calpha_2%20%3D%20%5Clambda_2%20%5Calpha_2%5ET%20%5Calpha_2%20%3D%20%5Clambda_2). 
 
@@ -109,23 +109,22 @@ Suppose our dataset has m dimensions ![img](https://latex.codecogs.com/svg.latex
 
     ![img](https://latex.codecogs.com/svg.latex?Var%28y_k%29%20%3D%20%5Calpha_k%5ET%5CSigma%20%5Calpha_k%20%3D%20%5Clambda_k%2C%20%5C%2C%20%5C%2C%20%5C%2C%20k%20%3D%201%2C2%2C...%2Cm)   
 
-    Where ![img](https://latex.codecogs.com/svg.latex?%5CSigma) is the covariance matrix with dimension (mxm), the Eigenvalues of ![img](https://latex.codecogs.com/svg.latex?%5CSigma) is ![img](https://latex.codecogs.com/svg.latex?%5Clambda_1%2C%20%5Clambda_2%2C%20...%2C%20%5Clambda_m) with ![img](https://latex.codecogs.com/svg.latex?%5Clambda_1%20%5Cgeqslant%20%5Clambda_2%20%5Cgeqslant%20...%20%5Cgeqslant%20%5Clambda_m%20%5Cgeqslant%200), and the corresponding unit Engenvectors of the Engenvalues are ![img](https://latex.codecogs.com/svg.latex?%5Calpha_1%2C%20%5Calpha_2%2C%20...%2C%20%5Calpha_m)  
+    Where ![img](https://latex.codecogs.com/svg.latex?%5CSigma) is the covariance matrix with dimension (mxm), the Eigenvalues of ![img](https://latex.codecogs.com/svg.latex?%5CSigma) is ![img](https://latex.codecogs.com/svg.latex?%5Clambda_1%2C%20%5Clambda_2%2C%20...%2C%20%5Clambda_m) with ![img](https://latex.codecogs.com/svg.latex?%5Clambda_1%20%5Cgeqslant%20%5Clambda_2%20%5Cgeqslant%20...%20%5Cgeqslant%20%5Clambda_m%20%5Cgeqslant%200), and the corresponding unit Engenvectors of the Engenvalues are ![img](https://latex.codecogs.com/svg.latex?%5Calpha_1%2C%20%5Calpha_2%2C%20...%2C%20%5Calpha_m).  
 
 - **e. How to select the right number of Principal Components**  
-  Above we talked about the logic behind figuring out the mth principal conponents. In fact, among these m principal conponents, we only need k of them and k principal conponents already retained much information (variance). Specifically, we use the below Proportion of Variance Explained metric to define the right k:  
+  Above we talked about the logic behind figuring out the mth principal components. In fact, among these m principal components, we only need k of them and k principal components already retained much information (variance). Specifically, we use the below Proportion of Variance Explained metric to define the right k:  
 
   Proportion of Variance Explained(k)= ![img](https://latex.codecogs.com/svg.latex?%5Csum_%7Bi%3D1%7D%5E%7Bk%7D%20%5Ceta_i%20%3D%5Cfrac%7B%5Csum_%7Bi%3D1%7D%5E%7Bk%7D%20%5Clambda_i%20%7D%7B%5Csum_%7Bi%3D1%7D%5E%7Bm%7D%20%5Clambda%20_i%20%7D)  
 
   Where ![img](https://latex.codecogs.com/svg.latex?%5Ceta_i) is the variance of the ith principal component.  
 
-  Usually, we select the k that make Proportion of Variance Explained greater than 70%-80%, which means that by select the top k principal components, we already retained much information (variance).  
-
+  Usually, we select the k that makes Proportion of Variance Explained greater than 70%-80%, which means that by selecting the top k principal components, we already retained about 70%-80% of the information (variance).  
 - **f. Actual Algorithms**  
-  There are two main algorithms (Eigenvalues Based Algorithm & SVD Based Algorithm) to decompose the dataset with m feautures into m principal components. Here we will only introduce Eigenvalues Based Algorithm.  
+  There are two main algorithms (Eigenvalues Based Algorithm & SVD Based Algorithm) to decompose the dataset with m features into m principal components. Here we will only introduce the Eigenvalues Based Algorithm.  
 
   - Eigenvalues Based Algorithm  
     Suppose now we have a dataset X with shape(mxn), m is the number of features and n is the number of samples.  
-    - (1) Firstly, normal the dataset X. We have to make sure that features with different scales are weighted the same.  
+    - (1) Firstly, normal dataset X. We have to make sure that features with different scales are weighted the same.  
 
       Specifically, for each ![img](https://latex.codecogs.com/svg.latex?x_%7Bij%7D) in Matrix X, we will have:  
 
