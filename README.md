@@ -9,4 +9,8 @@ Author
 
 Clustering
 ------------
-[**1. K-Means Clustering  Model**](./K-Means.md)   
+[**1. K-Means Clustering**](./K-Means.md)   
+
+Dimensionality reduction
+------------
+[**1. Principal Component Analysis**](./PCA.md) 
