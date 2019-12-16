@@ -1,6 +1,6 @@
 Unsupervised Learning Notes
 ============
-My study notes, contains Math behind some unsupervised machine learning models.  
+Machine Learning study notes, contains Math behind some unsupervised machine learning models.  
 
 Principal Components Analysis
 ------------
